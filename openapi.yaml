@@ -1,0 +1,92 @@
+openapi: 3.0.4
+info:
+  title: Shoe Size Converter
+  description: Shoe Size Converter is a tool for converting shoe sizes between US, UK, EU, CM, JP, AU, MX, and KR standards. It supports men, women, unisex, and child sizes.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/shoesizeconverter:
+    get:
+      summary: Convert Shoe Size
+      description: Shoe Size Converter is a tool for converting shoe sizes between US, UK, EU, CM, JP, AU, MX, and KR standards. It supports men, women, unisex, and child sizes.
+      operationId: shoesizeconverter
+      parameters:
+      - name: size
+        in: query
+        schema:
+          type: string
+        required: true
+        description: The shoe size to convert
+        example: '9'
+      - name: from
+        in: query
+        schema:
+          type: string
+        required: true
+        description: 'Source region: us, uk, eu, cm, jp, au, mx, or kr'
+        example: us
+      - name: gender
+        default: unisex
+        in: query
+        schema:
+          type: string
+        required: false
+        description: 'Gender sizing: men, women, unisex, or child (default: unisex)'
+        example: men
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  input_size: 9
+                  input_region: US
+                  gender: men
+                  conversions:
+                    cm: 29.1
+                    jp: 29.1
+                    us: 9
+                    uk: 8.1
+                    au: 8.1
+                    eu: 43.7
+                    mx: 13.7
+                    kr: 43.7
+                  note: Sizes are approximate and may vary by manufacturer
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
