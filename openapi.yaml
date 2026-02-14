@@ -1,47 +1,49 @@
 openapi: 3.0.4
 info:
   title: Shoe Size Converter
-  description: Shoe Size Converter is a tool for converting shoe sizes between US, UK, EU, CM, JP, AU, MX, and KR standards. It supports men, women, unisex, and child sizes.
+  description: >-
+    Shoe Size Converter is a tool for converting shoe sizes between US, UK, EU,
+    CM, JP, AU, MX, and KR standards. It supports men, women, unisex, and child
+    sizes.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/shoesizeconverter:
     get:
       summary: Convert Shoe Size
-      description: Shoe Size Converter is a tool for converting shoe sizes between US, UK, EU, CM, JP, AU, MX, and KR standards. It supports men, women, unisex, and child sizes.
+      description: Convert shoe size between international standards
       operationId: shoesizeconverter
       parameters:
-      - name: size
-        in: query
-        schema:
-          type: string
-        required: true
-        description: The shoe size to convert
-        example: '9'
-      - name: from
-        in: query
-        schema:
-          type: string
-        required: true
-        description: 'Source region: us, uk, eu, cm, jp, au, mx, or kr'
-        example: us
-      - name: gender
-        default: unisex
-        in: query
-        schema:
-          type: string
-        required: false
-        description: 'Gender sizing: men, women, unisex, or child (default: unisex)'
-        example: men
+        - name: size
+          in: query
+          schema:
+            type: string
+          required: true
+          description: The shoe size to convert
+          example: '9'
+        - name: from
+          in: query
+          schema:
+            type: string
+          required: true
+          description: Source region
+          example: us
+        - name: gender
+          in: query
+          schema:
+            type: string
+          required: false
+          description: Gender sizing
+          example: men
       responses:
         '200':
           description: Successful Response
@@ -57,11 +59,11 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   input_size: 9
                   input_region: US
@@ -81,7 +83,7 @@ paths:
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
 components:
   securitySchemes:
     api_key:
@@ -89,4 +91,4 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
