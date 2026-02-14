@@ -17,7 +17,7 @@ const api = new shoesizeconverterAPI({
 var query = {
   size: "9",
   from: "us",
-  gender: "men"
+  gender: "unisex"
 };
 
 // Make the API request using callback
