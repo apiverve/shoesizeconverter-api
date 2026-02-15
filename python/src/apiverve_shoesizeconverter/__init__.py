@@ -1,1 +1,3 @@
-from .apiClient import ShoesizeconverterAPIClient
+from .apiClient import ShoesizeconverterAPIClient, ShoesizeconverterAPIClientError
+
+__all__ = ['ShoesizeconverterAPIClient', 'ShoesizeconverterAPIClientError']
