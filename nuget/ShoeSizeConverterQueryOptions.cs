@@ -12,21 +12,18 @@ namespace APIVerve.API.ShoeSizeConverter
     {
         /// <summary>
         /// The shoe size to convert
-        /// Example: 9
         /// </summary>
         [JsonProperty("size")]
         public string Size { get; set; }
 
         /// <summary>
-        /// Source region: us, uk, eu, cm, jp, au, mx, or kr
-        /// Example: us
+        /// Source region
         /// </summary>
         [JsonProperty("from")]
         public string From { get; set; }
 
         /// <summary>
-        /// Gender sizing: men, women, unisex, or child (default: unisex)
-        /// Example: men
+        /// Gender sizing
         /// </summary>
         [JsonProperty("gender")]
         public string Gender { get; set; }
