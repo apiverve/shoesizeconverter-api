@@ -44,7 +44,11 @@ from apiverve_shoesizeconverter.apiClient import ShoesizeconverterAPIClient
 # Initialize the client with your APIVerve API key
 api = ShoesizeconverterAPIClient("[YOUR_API_KEY]")
 
-query = { "size": "9", "from": "us", "gender": "unisex" }
+query = {
+    "size": "9",
+    "from": "us",
+    "gender": "unisex"
+}
 
 try:
     # Make the API call
@@ -82,7 +86,11 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "size": "9", "from": "us", "gender": "unisex" }
+query = {
+    "size": "9",
+    "from": "us",
+    "gender": "unisex"
+}
 ```
 
 ###### Simple Request
@@ -133,7 +141,11 @@ from apiverve_shoesizeconverter.apiClient import ShoesizeconverterAPIClient, Sho
 
 api = ShoesizeconverterAPIClient("[YOUR_API_KEY]")
 
-query = { "size": "9", "from": "us", "gender": "unisex" }
+query = {
+    "size": "9",
+    "from": "us",
+    "gender": "unisex"
+}
 
 try:
     result = api.execute(query)
@@ -154,7 +166,11 @@ from apiverve_shoesizeconverter.apiClient import ShoesizeconverterAPIClient, Sho
 
 api = ShoesizeconverterAPIClient("[YOUR_API_KEY]")
 
-query = { "size": "9", "from": "us", "gender": "unisex" }
+query = {
+    "size": "9",
+    "from": "us",
+    "gender": "unisex"
+}
 
 try:
     result = api.execute(query)
@@ -188,7 +204,11 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_shoesizeconverter.apiClient import ShoesizeconverterAPIClient, ShoesizeconverterAPIClientError
 
-query = { "size": "9", "from": "us", "gender": "unisex" }
+query = {
+    "size": "9",
+    "from": "us",
+    "gender": "unisex"
+}
 
 # Using context manager ensures proper cleanup
 with ShoesizeconverterAPIClient("[YOUR_API_KEY]") as api:
@@ -214,7 +234,11 @@ from apiverve_shoesizeconverter.apiClient import ShoesizeconverterAPIClient
 # Enable debug mode
 api = ShoesizeconverterAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "size": "9", "from": "us", "gender": "unisex" }
+query = {
+    "size": "9",
+    "from": "us",
+    "gender": "unisex"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -229,8 +253,13 @@ from apiverve_shoesizeconverter.apiClient import ShoesizeconverterAPIClient
 
 api = ShoesizeconverterAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "size": "9",
+    "from": "us",
+    "gender": "unisex"
+}
+
 try:
-    query = { "size": "9", "from": "us", "gender": "unisex" }
     result = api.execute(query)
     print(result)
 finally:
