@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/shoesizeconverter",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Shoe Size Converter is a tool for converting shoe sizes between US, UK, EU, CM, JP, AU, MX, and KR standards. It supports men, women, unisex, and child sizes.",
   "main": "index.js",
   "types": "index.d.ts",
