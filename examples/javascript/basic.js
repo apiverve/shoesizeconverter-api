@@ -13,7 +13,14 @@ const API_URL = 'https://api.apiverve.com/v1/shoesizeconverter';
  */
 async function callShoeSizeConverterAPI() {
   try {
-    const response = await fetch(API_URL, {
+    // Query parameters
+    const params &#x3D; new URLSearchParams({
+            size: &#x27;9&#x27;,
+            from: &#x27;us&#x27;,
+            gender: &#x27;men&#x27;
+        });
+
+    const response = await fetch(`${API_URL}?${params}`, {
       method: 'GET',
       headers: {
         'x-api-key': API_KEY
