@@ -25,12 +25,15 @@ namespace APIVerve.API.ShoeSizeConverter
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
     {
         [JsonProperty("input_size")]
-        public long InputSize { get; set; }
+        public long? InputSize { get; set; }
 
         [JsonProperty("input_region")]
         public string InputRegion { get; set; }
@@ -48,27 +51,39 @@ namespace APIVerve.API.ShoeSizeConverter
     public partial class Conversions
     {
         [JsonProperty("cm")]
-        public double Cm { get; set; }
+        public double? Cm { get; set; }
 
         [JsonProperty("jp")]
-        public double Jp { get; set; }
+        public double? Jp { get; set; }
 
         [JsonProperty("us")]
-        public long Us { get; set; }
+        public long? Us { get; set; }
 
         [JsonProperty("uk")]
-        public double Uk { get; set; }
+        public double? Uk { get; set; }
 
         [JsonProperty("au")]
-        public double Au { get; set; }
+        public double? Au { get; set; }
 
         [JsonProperty("eu")]
-        public double Eu { get; set; }
+        public double? Eu { get; set; }
 
         [JsonProperty("mx")]
-        public double Mx { get; set; }
+        public double? Mx { get; set; }
 
         [JsonProperty("kr")]
-        public double Kr { get; set; }
+        public double? Kr { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
