@@ -2,9 +2,10 @@ openapi: 3.0.4
 info:
   title: Shoe Size Converter
   description: >-
-    Shoe Size Converter is a tool for converting shoe sizes between US, UK, EU,
-    CM, JP, AU, MX, and KR standards. It supports men, women, unisex, and child
-    sizes.
+    Shoe Size Converter translates footwear measurements across regional
+    standards, including US, UK, Australian, Mexican, and Korean sizing systems.
+    Provide a size, source region, and gender category to get equivalent sizes,
+    with paid plans adding European, Japanese, and centimeter measurements.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -19,7 +20,7 @@ servers:
 paths:
   /v1/shoesizeconverter:
     get:
-      summary: Convert Shoe Size
+      summary: Shoe Size Converter
       description: Convert shoe size between international standards
       operationId: shoesizeconverter
       parameters:
