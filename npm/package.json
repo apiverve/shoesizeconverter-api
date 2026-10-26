@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/shoesizeconverter",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Shoe Size Converter translates footwear measurements across regional standards, including US, UK, Australian, Mexican, and Korean sizing systems. Provide a size, source region, and gender category to get equivalent sizes, with paid plans adding European, Japanese, and centimeter measurements.",
   "main": "index.js",
   "types": "index.d.ts",
