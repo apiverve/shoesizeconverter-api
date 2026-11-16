@@ -1,0 +1,16 @@
+name: apiverve_shoesizeconverter
+description: "Shoe Size Converter translates footwear measurements across regional standards, including US, UK, Australian, European, Mexican, Korean and Japanese sizing systems. Provide a size, source region, and gender category to get US, UK and Australian equivalents, with paid plans adding European, Mexican, Korean, Japanese, and centimeter measurements."
+version: 1.2.6
+homepage: https://apiverve.com/marketplace/shoesizeconverter?utm_source=dart&utm_medium=referral&utm_content=homepage
+repository: https://github.com/apiverve/shoesizeconverter-api/tree/main/dart
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  http: ^1.1.0
+  http_parser: ^4.0.0
+
+dev_dependencies:
+  lints: ^3.0.0
+  test: ^1.24.0
