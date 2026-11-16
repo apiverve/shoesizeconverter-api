@@ -1,6 +1,6 @@
 # Shoe Size Converter API
 
-Shoe Size Converter translates footwear measurements across regional standards, including US, UK, Australian, Mexican, and Korean sizing systems. Provide a size, source region, and gender category to get equivalent sizes, with paid plans adding European, Japanese, and centimeter measurements.
+Shoe Size Converter translates footwear measurements across regional standards, including US, UK, Australian, European, Mexican, Korean and Japanese sizing systems. Provide a size, source region, and gender category to get US, UK and Australian equivalents, with paid plans adding European, Mexican, Korean, Japanese, and centimeter measurements.
 
 [![npm version](https://img.shields.io/npm/v/@apiverve/shoesizeconverter.svg)](https://www.npmjs.com/package/@apiverve/shoesizeconverter)
 
